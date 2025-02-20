@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+        margin: 100px auto;
+      }
+      /* Filter
+        blur(px)
+        brightness(angka | %)
+        contrast(angka | %)
+        saturate(angka | %)
+        grayscale(angka | %)
+        sepia(angka | %)
+        hue-rotate(angka | %)
+        invert(angka | %)
+        opacity(angka | %)
+        drop-shadow(sama seperti box-shadow) 
+        */
+      .blur img {
+        filter: blur(10px);
+      }
+
+      .brightness img {
+        filter: brightness(150%);
+      }
+
+      .contrast img {
+        filter: contrast(150%); /*defaultnya 100%*/
+      }
+
+      .saturate img {
+        filter: saturate(150%); /*defaultnya 100%, semakin tinggi semakin cerah, semakin kecil% makin abu2 warnyanya*/
+      }
+
+      .grayscale img {
+        filter: grayscale(100%); /*100% akan jadi abu2 kebalikan dari saturate*/
+      }
+
+      .sepia img {
+        filter: sepia(100%); /*sama seprti grayscale cuman beda di warna, ini jadi kuning*/
+      }
+
+      .hue-rotate img {
+        filter: hue-rotate(100deg); /*kita merotasi warnanya, disini putar warnanya searah 100 degree searah jarum jam*/
+      }
+
+      .invert img {
+        filter: invert(100%); /*defaultnya 0, dan ini akan membuat negatif film*/
+      }
+
+      .opacity img {
+        filter: opacity(50%); /*sama dgn properti css 3, value 0/1 atau 0-100%*/
+      }
+
+      .drop-shadow img {
+        filter: drop-shadow(5px 5px 5px black); /*ke kanan 5px, ke bawah 5px, blurnya 5px dan warnanya hitam, ini sedikit lebih keren dari box-shadow / text-shadow*/
+      }
+
+      .multiple img {
+        filter:  blur(5px) grayscale(100%); /*gunakan layanan */ 
+      }
+
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="blur">
+      <h1>filter - blur</h1>
+      <img src="img/gambar1.jpg" alt="" />
+    </div>
+    <div class="brightness">
+        <h1>filter - brightness</h1>
+        <img src="img/gambar1.jpg" alt="">
+    </div>
+    <div class="contrast">
+        <h1>filter - contrast</h1>
+        <img src="img/gambar1.jpg" alt="">
+    </div>
+    <div class="saturate">
+        <h1>filter - saturate</h1>
+        <img src="img/gambar1.jpg" alt="">
+    </div>
+    <div class="grayscale">
+        <h1>filter - grayscale</h1>
+        <img src="img/gambar1.jpg" alt="">
+    </div>
+    <div class="sepia">
+        <h1>filter - sepia</h1>
+        <img src="img/gambar1.jpg" alt="">
+    </div>
+    <div class="hue-rotate">
+        <h1>filter hue-rotate</h1>
+        <img src="img/gambar1.jpg" alt="">
+    </div>
+    <div class="invert">
+        <h1>filter - invert</h1>
+        <img src="img/gambar1.jpg" alt="">
+    </div>
+    <div class="opacity">
+        <h1>filter - opacity</h1>
+        <img src="img/gambar1.jpg" alt="">
+    </div>
+    <div class="drop-shadow">
+        <h1>filter drop-shadow</h1>
+        <img src="img/gambar1.jpg" alt="">
+    </div>
+    <div class="multiple">
+        <h1>filter yang digabungkan semua valuenya</h1>
+        <img src="img/gambar1.jpg" alt="">
+    </div>
+  </body>
+</html>

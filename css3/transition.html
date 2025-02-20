@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        font-size: 20px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      .durasi {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        margin: 1px;
+        transition: 2s;
+      }
+
+      .durasi:hover {
+        transform: rotate(90deg);
+      }
+
+      .container {
+        width: 950px;
+        border: 5px solid black;
+      }
+
+      .container2 {
+        width: 950px;
+        border: 5px solid black;
+      }
+
+      .properti {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        margin: 1px;
+        transition: margin-left 2s;
+      }
+
+      .container:hover .properti {
+        transform: rotate(720deg);
+        margin-left: 750px;
+        background-color: blue;
+      }
+
+      .kotak1 {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        text-align: center;
+        line-height: 200px;
+      }
+
+      .kotak2 {
+        width: 200px;
+        height: 200px;
+        background-color: rebeccapurple;
+        margin-top: 10px;
+        text-align: center;
+        line-height: 200px;
+      }
+
+      .kotak1 {
+        transition: all 2s ease;
+      }
+      .kotak2 {
+        transition: all 2s ease-in;
+      }
+
+      .container2:hover .kotak1 {
+        transform: rotate(720deg);
+        margin-left: 800px;
+        background-color: red;
+      }
+      .container2:hover .kotak2 {
+        transform: rotate(720deg);
+        margin-left: 800px;
+        background-color: blue;
+      }
+
+      .container3:hover .kotak3 {
+        transform: rotate(720deg);
+        margin-left: 800px;
+        background-color: blue;
+      }
+
+      .kotak3 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        margin-left: 50px;
+        transition: all 3s cubic-bezier(0.24, -0.35, 0.78, 1.46);
+      }
+
+      .kotak3:hover {
+        transform: rotate(720deg);
+        margin-left: 800px;
+        background-color: blue;
+      }
+
+      .delay {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin-left: 20px;
+        transition: margin-left 3s, transform 3s 2s, background-color 2s 3s;
+      }
+
+      .container4:hover .delay {
+        transform: rotate(720deg);
+        margin-left: 800px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <p>berikut contoh transisi : css3</p>
+    <h1>ini parameter durasi :</h1>
+    <div class="durasi"></div>
+    <h1>ini parameter properti :</h1>
+    <!-- ini harus dibungkus dengan container -->
+    <div class="container">
+      <div class="properti"></div>
+    </div>
+    <h1>ini parameter fungsi :</h1>
+    <div class="container2">
+      <div class="kotak1">ease</div>
+      <div class="kotak2">ease-in</div>
+    </div>
+    <div class="container3">
+      <h1>ini yang keren (cubic-bezier)</h1>
+      <div class="kotak3"></div>
+    </div>
+
+    <div class="container4">
+      <h1>ini delay :</h1>
+      <div class="delay"></div>
+    </div>
+  </body>
+</html>

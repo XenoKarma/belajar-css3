@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANIMATION/KEYFRAMES</title>
+    <style>
+      .kotak {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        animation: animasiKotak 5s ease-in infinite alternate;
+      }
+
+      @keyframes animasiKotak {
+        0% {
+          width: 200px;
+          height: 200px;
+        }
+
+        25% {
+          width: 500px;
+          height: 200px;
+        }
+
+        50% {
+          width: 500px;
+          height: 900px;
+        }
+
+        75% {
+          width: 500px;
+          height: 200px;
+        }
+
+        100% {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="kotak"></div>
+  </body>
+</html>
